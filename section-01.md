@@ -22,3 +22,40 @@ INPUT                               OUTPUT          //NOTES
          ((< a b) b)
          (else -1))
    (+ a 1))
+
+
+
+
+##EXERCISE 1.2
+Translate the given expression into prefix form
+ANSWER:
+(/ (+ 4 5 (- 2 (- 3 (+ 6 (/ 4 3))))) (* 3 (- 6 2) (- 2 7))))
+Numerator: (+ 4 5 (- 2 (- 3 (+ 6 (/ 4 3)))))
+Denominator: (* 3 (- 6 2) (- 2 7)))
+
+
+
+##EXERCISE 1.3
+Define a procedure that takes three numbers as arguments and returns the sum of the squares of the two larger numbers.
+
+ANSWER:
+(define (square z) (* z z))
+
+(if ((> a b) (define largerab a)) (define largerab b)) 
+(if ((> a c) (define largerac a)) (define largerac c))
+(if ((> b c) (define largerbc b)) (define largerbc c))
+
+(if (and (> largerab largerac) (> largerab largerbc)) define largest largerab) 
+(if (and (> largerac largerab) (> largerac largerbc)) define largest largerac) 
+(if (and (> largerbc largerab) (> largerbc largerac)) define largest largerbc) 
+
+(if (and (< largerab largerac) (> largerab largerbc)) define middle largerab) 
+(if (and (> largerab largerac) (< largerab largerbc)) define middle largerab) 
+
+(if (and (< largerac largerab) (> largerac largerbc)) define middle largerac) 
+(if (and (> largerac largerab) (< largerac largerbc)) define middle largerac) 
+
+(if (and (< largerbc largerab) (> largerbc largerac)) define middle largerbc) 
+(if (and (> largerbc largerab) (< largerbc largerac)) define middle largerbc) 
+
+(define answer (+ middle largest))
