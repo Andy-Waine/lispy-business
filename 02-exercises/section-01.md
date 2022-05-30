@@ -28,10 +28,13 @@
 
 ##EXERCISE 1.2
       Translate the given expression into prefix form (source: README/SICP)
+     
       ANSWER:
+      
       (/ (+ 4 5 (- 2 (- 3 (+ 6 (/ 4 3))))) (* 3 (- 6 2) (- 2 7))))
-      Numerator: (+ 4 5 (- 2 (- 3 (+ 6 (/ 4 3)))))
-      Denominator: (* 3 (- 6 2) (- 2 7)))
+            addenda:
+                  Numerator: (+ 4 5 (- 2 (- 3 (+ 6 (/ 4 3)))))
+                  Denominator: (* 3 (- 6 2) (- 2 7)))
 
 
 
@@ -63,6 +66,7 @@
 
 ##EXERCISE 1.9
       Illustrate the process of each procedure in evaluating (+ 4 5). Are these processes iterative or recursive?
+      
       I.
             (define (+ a b)
                   (if (= a 0)
@@ -94,3 +98,34 @@
             a=0, b=9, a+b=9
             a=0, therefore output: b = 9  //END
             ITERATIVE
+ 
+
+##EXERCISE 1.11  
+      A function f is defined by the rule that:
+      
+      f(n) = n if n<3 and f(n) = f(n - 1) + 2f(n - 2) + 3f(n - 3) if n> 3 
+      
+      Write a procedure that computes f by means of a recursive process. 
+      Write a procedure that computes f by means of an iterative process.
+
+      ****************  THE ENCLOSED ARE ATTEMPTS ONLY *******************
+      
+      (define f(n)
+            (if n<3)
+                  n
+                  (inc f(- n (inc(1)))))
+      RECURSIVE
+
+
+      (define f(n)
+      (if n<3)
+            n
+            (-   (inc(f(n)))  (^ (inc(f)) 2)  )
+      ITERATIVE
+
+
+      *********************** END ATTEMPTS ********************************
+
+
+
+            
